@@ -1,20 +1,24 @@
 
 import java.io.*;
-import java.nio.charset.Charset;
 import java.util.ArrayList;
-import java.util.Objects;
+import java.util.Scanner;
 
 public class mainClass {
     static InputStream myInputStream = null;
-    static String filePath = "C://Users/chichiu/Desktop/test.txt"; // absolute path
+    static String absoluteFilePath = "C://Users/chichiu/Desktop/test.txt"; // absolute path
+    //    static String relativeFilePath = "./file/test.txt"; // relative path // not working
     static ArrayList<String> myLineArrayList = new ArrayList<>();
     public static final String ANSI_RESET = "\u001B[0m";
     public static final String ANSI_RED = "\u001B[31m";
-
+    static String cssClassToFind = "";
 
     public static void main(String[] args) throws Exception {
 
-        myInputStream = new FileInputStream(filePath);
+        System.out.println(System.getProperty("user.dir"));
+
+        myInputStream = mainClass.class.getResourceAsStream("test.txt");
+
+//        myInputStream = new FileInputStream(relativeFilePath);
 //        printOriginalFile(); // print whole original file text
 
 
@@ -26,40 +30,110 @@ public class mainClass {
         System.out.println("myLinesArray.length " + myLinesArray.length);
         // add each line into array list
         for (int i = 0; i < myLinesArray.length; i++) {
-//            System.out.printf("line "+i+" :");
-//            System.out.println(myLinesArray[i]);
             myLineArrayList.add(myLinesArray[i]);
-
         }
 
 //        debugPrintList(myLineArrayList);
 //        clearComment(myLineArrayList);
-//        System.out.print("==========================================");
-        debugPrintList(clearEmptyLine(clearComment(myLineArrayList)));
-//        debugPrintList(clearComment(myLineArrayList));
 
-//
-//        String line;
-//
-//        try (
-//                InputStreamReader isr = new InputStreamReader(myInputStream, Charset.forName("UTF-8"));
-//                BufferedReader br = new BufferedReader(isr);
-//        ) {
-//            while ((line = br.readLine()) != null) {
-//                // Do your thing with line
-//                String[] words = line.split(" ");
-//                System.out.print(words);
-//
-//
-//            }
-//        }
+//        debugPrintList(clearEmptyLine(clearComment(myLineArrayList)));
+
+        Scanner reader = new Scanner(System.in);  // Reading from System.in
+        System.out.println("input a css class name to extract: ");
+        String userInput = reader.nextLine(); // Scans the next token of the input as an int.
+        //once finished
+
+        System.out.println("Find class:  '" + userInput + "' ? (y/n)");
+        while (reader.nextLine().contains("n")) {
+            System.out.println("input a css class name to extract: ");
+            userInput = reader.nextLine();
+            System.out.println("Find class: " + userInput + " ? (y/n)");
+        }
+        reader.close();
+
+        cssClassToFind = userInput;
+
+        extractClassFromEveryBlock(clearEmptyLine(clearComment(myLineArrayList)), cssClassToFind);
+    }
 
 
+    // get clear css data and class name, return new css data
+    static ArrayList<String> extractClassFromEveryBlock(ArrayList<String> myArrayL, String className) {
+        System.out.printf("extractClassFromEveryBlock ");
+        System.out.println("length " + myArrayL.size());
+        ArrayList<String> myNewArrayList = new ArrayList<>();
+
+        int bracketOpen = 0;
+        boolean eatFirstBracket = false;
+        for (int i = 0; i < myArrayL.size(); i++) {
+
+            System.out.printf("line " + i + " :");
+
+
+            System.out.print(myArrayL.get(i) + "\r\n");
+
+
+            if (myArrayL.get(i).contains(className)) {
+                //String string = myArrayL.get(i) + Integer.toString(bracketOpen);
+                myNewArrayList.add(myArrayL.get(i));
+
+
+                if (myArrayL.get(i).contains("{")) {
+                    bracketOpen++;
+                } else {
+                    eatFirstBracket = true;
+                }
+                if (myArrayL.get(i).contains("}")) {
+                    bracketOpen--;
+                }
+
+            } else if (bracketOpen > 0) {
+                myNewArrayList.add(myArrayL.get(i));
+                if (myArrayL.get(i).contains("{")) {
+                    bracketOpen++;
+                }
+
+                if (myArrayL.get(i).contains("}")) {
+                    bracketOpen--;
+
+                }
+
+            } else if (eatFirstBracket) {
+                if (myArrayL.get(i).contains("{")) {
+                    myNewArrayList.add(myArrayL.get(i));
+                    bracketOpen++;
+                    eatFirstBracket = false;
+                }
+            }
+
+
+        }
+        debugPrintList(myNewArrayList);
+
+        return myArrayL;
+    }
+
+
+    static void checkBracket(String string) {
+        boolean bracketOpen = false;
+        if (string.contains("{")) {
+            bracketOpen = true;
+            if (string.contains("}")) {
+                System.out.printf(ANSI_RED + "* { " + ANSI_RESET);
+                System.out.println(ANSI_RED + "* }" + ANSI_RESET);
+            } else {
+
+                System.out.println("* { ");
+            }
+
+        } else {
+            System.out.println(string);
+        }
     }
 
 
     static void debugPrintList(ArrayList<String> myArrayL) {
-        System.out.printf("debugPrintList ");
+        System.out.printf("debugPrintList==================== ");
         System.out.println("length " + myArrayL.size());
 
         for (int i = 0; i < myArrayL.size(); i++) {
@@ -76,12 +150,12 @@ public class mainClass {
         boolean commentEnded = false;
         for (int i = 0; i < myArrayL.size(); i++) {
 
-            System.out.printf("line " + i + " :");
+//            System.out.printf("line " + i + " :");
 
             //remove empty line
             if (myArrayL.get(i).length() == 1) {
 
-                System.out.println(ANSI_RED + "***empty line!" + ANSI_RESET);
+//                System.out.println(ANSI_RED + "***empty line!" + ANSI_RESET);
 
             } else if (myArrayL.get(i).contains("/*")) {
 
@@ -91,7 +165,7 @@ public class mainClass {
                 }
                 myArrayL.set(i, "");
 
-                System.out.println(ANSI_RED + "***comments.!" + ANSI_RESET);
+//                System.out.println(ANSI_RED + "***comments.!" + ANSI_RESET);
 
             } else if (!commentEnded) {
                 if (myArrayL.get(i).contains("*/")) {
@@ -114,13 +188,13 @@ public class mainClass {
         System.out.printf("debugPrintList ");
         System.out.println("length " + myArrayL.size());
 
-        for (int i = myArrayL.size()-1; i > 0; i--) {
-            if(myArrayL.get(i).length()<=1){
-                System.out.println(ANSI_RED+"length "+myArrayL.get(i).length()+" "+ANSI_RESET);
+        for (int i = myArrayL.size() - 1; i > 0; i--) {
+            if (myArrayL.get(i).length() <= 1) {
+//                System.out.println(ANSI_RED + "length " + myArrayL.get(i).length() + " " + ANSI_RESET);
 //                System.out.printf(ANSI_RED+"empty");
                 myArrayL.remove(i);
-            }else {
-                System.out.println("length "+myArrayL.get(i).length()+" "+myArrayL.get(i));
+            } else {
+//                System.out.println("length " + myArrayL.get(i).length() + " " + myArrayL.get(i));
 
             }
 //            System.out.printf("line " + i + " :");
