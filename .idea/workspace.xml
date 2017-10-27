@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1fc191d-607a-4236-8d6e-2a338bfc7088" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/stringProcessCss/mainClass.class" afterPath="$PROJECT_DIR$/out/production/stringProcessCss/mainClass.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/stringProcessCss/test.txt" afterPath="$PROJECT_DIR$/out/production/stringProcessCss/test.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mainClass.java" afterPath="$PROJECT_DIR$/src/mainClass.java" />
     </list>
     <ignored path="string_process_css.iws" />
@@ -28,12 +25,13 @@
       <file leaf-file-name="mainClass.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/mainClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="537">
-              <caret line="149" column="0" lean-forward="true" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
+            <state relative-caret-position="368">
+              <caret line="57" column="41" lean-forward="false" selection-start-line="57" selection-start-column="41" selection-end-line="57" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#extractClassFromEveryBlock#0;class#mainClass#0" expanded="false" />
                 <element signature="method#extractClassWithoutMediaBlock#0;class#mainClass#0" expanded="false" />
+                <element signature="method#removeClassPlus#0;class#mainClass#0" expanded="false" />
                 <element signature="method#removeClassRE#0;class#mainClass#0" expanded="false" />
                 <element signature="method#removeClass#0;class#mainClass#0" expanded="false" />
                 <element signature="method#printOriginalFile#0;class#mainClass#0" expanded="false" />
@@ -80,6 +78,11 @@
       <find>debugPrintList====================</find>
       <find>.header</find>
       <find>@media</find>
+      <find>extractBlockFromLevelOne</find>
+      <find>debugPrintList</find>
+      <find>This text is red!</find>
+      <find>line</find>
+      <find>line i</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -461,12 +464,12 @@
       <updated>1508990908649</updated>
       <workItem from="1509011826919" duration="8644000" />
       <workItem from="1509077724307" duration="6803000" />
-      <workItem from="1509094227060" duration="4657000" />
+      <workItem from="1509094227060" duration="5485000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20104000" />
+    <option name="totallyTimeSpent" value="20932000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -479,7 +482,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1874" height="1096" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32937685" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -489,7 +491,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3692142" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="228" y="67" width="971" height="633" />
+      <window_info id="Run" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3692142" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="228" y="67" width="971" height="633" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -543,6 +545,7 @@
             <element signature="imports" expanded="true" />
             <element signature="method#extractClassFromEveryBlock#0;class#mainClass#0" expanded="false" />
             <element signature="method#extractClassWithoutMediaBlock#0;class#mainClass#0" expanded="false" />
+            <element signature="method#removeClassPlus#0;class#mainClass#0" expanded="false" />
             <element signature="method#removeClassRE#0;class#mainClass#0" expanded="false" />
             <element signature="method#removeClass#0;class#mainClass#0" expanded="false" />
             <element signature="method#printOriginalFile#0;class#mainClass#0" expanded="false" />
@@ -574,6 +577,7 @@
             <element signature="imports" expanded="true" />
             <element signature="method#extractClassFromEveryBlock#0;class#mainClass#0" expanded="false" />
             <element signature="method#extractClassWithoutMediaBlock#0;class#mainClass#0" expanded="false" />
+            <element signature="method#removeClassPlus#0;class#mainClass#0" expanded="false" />
             <element signature="method#removeClassRE#0;class#mainClass#0" expanded="false" />
             <element signature="method#removeClass#0;class#mainClass#0" expanded="false" />
             <element signature="method#printOriginalFile#0;class#mainClass#0" expanded="false" />
@@ -605,6 +609,7 @@
             <element signature="imports" expanded="true" />
             <element signature="method#extractClassFromEveryBlock#0;class#mainClass#0" expanded="false" />
             <element signature="method#extractClassWithoutMediaBlock#0;class#mainClass#0" expanded="false" />
+            <element signature="method#removeClassPlus#0;class#mainClass#0" expanded="false" />
             <element signature="method#removeClassRE#0;class#mainClass#0" expanded="false" />
             <element signature="method#removeClass#0;class#mainClass#0" expanded="false" />
             <element signature="method#printOriginalFile#0;class#mainClass#0" expanded="false" />
@@ -638,12 +643,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mainClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="537">
-          <caret line="149" column="0" lean-forward="true" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
+        <state relative-caret-position="368">
+          <caret line="57" column="41" lean-forward="false" selection-start-line="57" selection-start-column="41" selection-end-line="57" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#extractClassFromEveryBlock#0;class#mainClass#0" expanded="false" />
             <element signature="method#extractClassWithoutMediaBlock#0;class#mainClass#0" expanded="false" />
+            <element signature="method#removeClassPlus#0;class#mainClass#0" expanded="false" />
             <element signature="method#removeClassRE#0;class#mainClass#0" expanded="false" />
             <element signature="method#removeClass#0;class#mainClass#0" expanded="false" />
             <element signature="method#printOriginalFile#0;class#mainClass#0" expanded="false" />

@@ -53,10 +53,16 @@ public class mainClass {
         reader.close();
 
         cssClassToFind = userInput;
+        ArrayList<String> pureAL = new ArrayList<>();
 
-        tempAL = extractClassFromEveryBlock(clearEmptyLine(clearComment(myLineArrayList)), "@media");
+        pureAL = clearEmptyLine(clearComment(myLineArrayList));
 
-        tempAL = removeClassPlus(tempAL, ".jumbotron");
+        debugPrintList(extractBlockFromLevelOne(pureAL,""));//todo
+
+//        tempAL = extractClassFromEveryBlock(pureAL, "@media");
+
+
+//        tempAL = removeClassPlus(tempAL, ".jumbotron");
 //        removeClass(tempAL, ".header");
     }
 
@@ -124,7 +130,7 @@ public class mainClass {
     }
 
     static ArrayList<String> extractBlockFromLevelOne(ArrayList<String> myArrayL, String className) {//todo //todo
-        System.out.printf("extractClassFromEveryBlock ");
+        System.out.printf("extractBlockFromLevelOne ");
         System.out.println("length " + myArrayL.size());
         ArrayList<String> myNewArrayList = new ArrayList<>();
 
@@ -138,25 +144,22 @@ public class mainClass {
 
             System.out.print(myArrayL.get(i) + "\r\n");
 
+            blockClass += string;
 
             if (string.contains("{")) {
                 bracketOpen++;
-                blockClass += string;
+
             }
             if (string.contains("}")) {
                 bracketOpen--;
-                blockClass += string;
             }
 
             if (bracketOpen == 0) {
-                findFirstBracket = true;
+
                 myNewArrayList.add(blockClass);
                 blockClass = "";
             }
 
-            if (findFirstBracket) {
-                blockClass += myArrayL.get(i);
-            }
 
 
         }
@@ -425,7 +428,7 @@ public class mainClass {
                 myArrayL.set(i, "");
             } else {
 
-                System.out.println(myArrayL.get(i));
+//                System.out.println(myArrayL.get(i));
 
             }
 
