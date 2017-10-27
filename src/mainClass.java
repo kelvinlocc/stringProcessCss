@@ -6,7 +6,7 @@ import java.util.Objects;
 
 public class mainClass {
     static InputStream myInputStream = null;
-    static String filePath = "C://Users/chichiu/Desktop/test.txt";
+    static String filePath = "C://Users/chichiu/Desktop/test.txt"; // absolute path
     static ArrayList<String> myLineArrayList = new ArrayList<>();
     public static final String ANSI_RESET = "\u001B[0m";
     public static final String ANSI_RED = "\u001B[31m";
