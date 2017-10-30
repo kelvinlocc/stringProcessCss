@@ -34,11 +34,6 @@ public class mainClass {
             myLineArrayList.add(myLinesArray[i]);
         }
 
-//        debugPrintList(myLineArrayList);
-//        clearComment(myLineArrayList);
-
-//        debugPrintList(clearEmptyLine(clearComment(myLineArrayList)));
-
         Scanner reader = new Scanner(System.in);  // Reading from System.in
         System.out.println("input a css class name to extract: ");
         String userInput = reader.nextLine(); // Scans the next token of the input as an int.
@@ -57,17 +52,15 @@ public class mainClass {
 
         pureAL = clearEmptyLine(clearComment(myLineArrayList));
 
-        debugPrintList(extractBlockFromLevelOne(pureAL,""));//todo
-
-//        tempAL = extractClassFromEveryBlock(pureAL, "@media");
+        tempAL = extractBlockFromLevelOne(pureAL, "");//todo
 
 
-//        tempAL = removeClassPlus(tempAL, ".jumbotron");
-//        removeClass(tempAL, ".header");
+
+
     }
 
 
-    // get clear css data and class name, return new css data
+
     static ArrayList<String> extractClassFromEveryBlock(ArrayList<String> myArrayL, String className) {
         System.out.printf("extractClassFromEveryBlock ");
         System.out.println("length " + myArrayL.size());
@@ -78,9 +71,9 @@ public class mainClass {
         for (int i = 0; i < myArrayL.size(); i++) {
 
             System.out.printf("line " + i + " :");
+            String string = myArrayL.get(i);
 
-
-            System.out.print(myArrayL.get(i) + "\r\n");
+//            System.out.print(myArrayL.get(i) + "\r\n");
 
 
             if (myArrayL.get(i).contains(className)) {
@@ -128,24 +121,24 @@ public class mainClass {
 
         return myNewArrayList;
     }
+    static String blockClass = " ";
 
     static ArrayList<String> extractBlockFromLevelOne(ArrayList<String> myArrayL, String className) {//todo //todo
+
         System.out.printf("extractBlockFromLevelOne ");
         System.out.println("length " + myArrayL.size());
         ArrayList<String> myNewArrayList = new ArrayList<>();
 
         int bracketOpen = 0;
-        boolean findFirstBracket = true;
-        String blockClass = "";
+
         for (int i = 0; i < myArrayL.size(); i++) {
             String string = myArrayL.get(i);
+            //very important to clear out the string property
+            string = string.replace("\n","").replace("\r","");
             System.out.printf("line " + i + " :");
-
-
             System.out.print(myArrayL.get(i) + "\r\n");
 
-            blockClass += string;
-
+            blockClass=blockClass+string;
             if (string.contains("{")) {
                 bracketOpen++;
 
@@ -154,240 +147,41 @@ public class mainClass {
                 bracketOpen--;
             }
 
+
             if (bracketOpen == 0) {
+                System.out.printf(" blockClass" );
 
+                System.out.println(blockClass );
                 myNewArrayList.add(blockClass);
-                blockClass = "";
+                blockClass = " ";
             }
-
-
-
         }
 
-//        debugPrintList(myNewArrayList);
+        System.out.println("end of extractBlockFromLevelOne function");
 
+        clearNonClassBlock_subClass(myNewArrayList);
         return myNewArrayList;
     }
 
+    static ArrayList<String>  clearNonClassBlock_subClass(ArrayList<String> myArrayL){
 
-    static ArrayList<String> extractClassWithoutMediaBlock(ArrayList<String> myArrayL, String className) {
-        System.out.printf("extractClassFromEveryBlock ");
-        System.out.println("length " + myArrayL.size());
-        ArrayList<String> myNewArrayList = new ArrayList<>();
-
-        int bracketOpen = 0;
-        boolean eatFirstBracket = false;
-        boolean skip = false;
-        for (int i = 0; i < myArrayL.size(); i++) {
-
-            System.out.printf("line " + i + " :");
-
-
-            System.out.print(myArrayL.get(i) + "\r\n");
-
-            if (myArrayL.get(i).contains("@media")) {
-
-
-                if (myArrayL.get(i).contains("{")) {
-                    bracketOpen++;
-                } else {
-                    eatFirstBracket = true;
-                }
-                if (myArrayL.get(i).contains("}")) {
-                    bracketOpen--;
-                }
-
-
-            } else if (bracketOpen > 0) {
-
-                if (myArrayL.get(i).contains("{")) {
-                    bracketOpen++;
-                } else {
-                    eatFirstBracket = true;
-                }
-                if (myArrayL.get(i).contains("}")) {
-                    bracketOpen--;
-                }
-
-                if (!skip) {
-                    if (myArrayL.get(i).contains(className)) {
-                        //String string = myArrayL.get(i) + Integer.toString(bracketOpen);
-                        myNewArrayList.add(myArrayL.get(i));
-
-
-                        if (myArrayL.get(i).contains("{")) {
-                            bracketOpen++;
-                        } else {
-                            eatFirstBracket = true;
-                        }
-                        if (myArrayL.get(i).contains("}")) {
-                            bracketOpen--;
-                        }
-
-                    } else if (bracketOpen > 0) {
-                        myNewArrayList.add(myArrayL.get(i));
-                        if (myArrayL.get(i).contains("{")) {
-                            bracketOpen++;
-                        }
-
-                        if (myArrayL.get(i).contains("}")) {
-                            bracketOpen--;
-
-                        }
-
-                    } else if (eatFirstBracket) {
-                        if (myArrayL.get(i).contains("{")) {
-                            myNewArrayList.add(myArrayL.get(i));
-                            bracketOpen++;
-                            eatFirstBracket = false;
-                        }
-                    }
-                }
+        for (int i = myArrayL.size()-1; i >0; i--) {
+            if(!myArrayL.get(i).contains("{")){
+                myArrayL.remove(i);
+                System.out.println("remove");
             }
-
-
-        }
-        debugPrintList(myNewArrayList);
-
-        return myArrayL;
-    }
-
-    static ArrayList<String> removeClassPlus(ArrayList<String> myArrayL, String className) {
-        System.out.println("removeClassPlus: ");
-
-        ArrayList<String> lineToRemove = new ArrayList<>();
-
-        lineToRemove = extractClassFromEveryBlock(myArrayL, className);  // contain line to remove
-        debugPrintList(lineToRemove);
-
-        int counter = 0;
-        for (int i = 0; i < myArrayL.size(); i++) {
-            for (int j = 0; j < lineToRemove.size(); j++) { //todo
-                if (counter < lineToRemove.size()) {
-                    if (myArrayL.get(i).contains(lineToRemove.get(counter))) {
-                        myArrayL.set(i, "");
-                        counter++;
-                    }
-                }
-
-//                if(myArrayL.get(i).contains(lineToRemove.get(j))){
-//                    myArrayL.set(i,"");
-//                }
-            }
-
         }
 
-        debugPrintList(myArrayL);
-
+        debugPrintList(myArrayL,"clear up non class block check check----");
 
         return myArrayL;
     }
 
 
-    static ArrayList<String> removeClassRE(ArrayList<String> myArrayL, String className) {
-        System.out.println("removeClassPlus: ");
 
-        ArrayList<String> lineToRemove = new ArrayList<>();
-
-        lineToRemove = extractClassFromEveryBlock(myArrayL, className);  // contain line to remove
-        debugPrintList(lineToRemove);
-
-        int counter = 0;
-        for (int i = 0; i < myArrayL.size(); i++) {
-            for (int j = 0; j < lineToRemove.size(); j++) { //todo
-                if (counter < lineToRemove.size()) {
-                    if (myArrayL.get(i).contains(lineToRemove.get(counter))) {
-                        myArrayL.set(i, "");
-                        counter++;
-                    }
-                }
-
-//                if(myArrayL.get(i).contains(lineToRemove.get(j))){
-//                    myArrayL.set(i,"");
-//                }
-            }
-
-        }
-
-        debugPrintList(myArrayL);
-
-
-        return myArrayL;
-    }
-
-
-    static ArrayList<String> removeClass(ArrayList<String> myArrayL, String className) {
-        System.out.printf("removeClass ");
-        System.out.println("length " + myArrayL.size());
-
-        int bracketOpen = 0;
-        boolean eatFirstBracket = false;
-        for (int i = 0; i < myArrayL.size(); i++) {
-
-            System.out.printf("line " + i + " :");
-
-
-            System.out.print(myArrayL.get(i) + "\r\n");
-
-
-            if (myArrayL.get(i).contains(className)) {
-
-
-                if (myArrayL.get(i).contains("{")) {
-                    bracketOpen++;
-                } else {
-                    eatFirstBracket = true;
-                }
-                if (myArrayL.get(i).contains("}")) {
-                    bracketOpen--;
-                }
-                myArrayL.set(i, "");
-            } else if (bracketOpen > 0) {
-
-                if (myArrayL.get(i).contains("{")) {
-                    bracketOpen++;
-                }
-
-                if (myArrayL.get(i).contains("}")) {
-                    bracketOpen--;
-
-                }
-                myArrayL.set(i, "");
-            } else if (eatFirstBracket) {
-                if (myArrayL.get(i).contains("{")) {
-                    myArrayL.set(i, "");
-                    bracketOpen++;
-                    eatFirstBracket = false;
-                }
-            }
-
-
-        }
-        debugPrintList(myArrayL);
-
-        return myArrayL;
-    }
-
-    static void checkBracket(String string) {
-        boolean bracketOpen = false;
-        if (string.contains("{")) {
-            bracketOpen = true;
-            if (string.contains("}")) {
-                System.out.printf(ANSI_RED + "* { " + ANSI_RESET);
-                System.out.println(ANSI_RED + "* }" + ANSI_RESET);
-            } else {
-
-                System.out.println("* { ");
-            }
-
-        } else {
-            System.out.println(string);
-        }
-    }
-
-
-    static void debugPrintList(ArrayList<String> myArrayL) {
-        System.out.printf("debugPrintList==================== ");
+    // print array list
+    static void debugPrintList(ArrayList<String> myArrayL,String msn) {
+        System.out.printf("debugPrintList==================== "+msn);
         System.out.println("length " + myArrayL.size());
 
         for (int i = 0; i < myArrayL.size(); i++) {
