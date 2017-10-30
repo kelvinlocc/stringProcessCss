@@ -25,6 +25,10 @@ public class StringBuilderDemo {
         extraction(myArrayL);
     }
 
+    static void printTest(){
+        System.out.println("123");
+    }
+
 
     static void extraction(ArrayList<String> myArrayL) {
         System.out.println("the original list:");
