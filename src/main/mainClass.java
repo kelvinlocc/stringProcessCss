@@ -60,7 +60,9 @@ public class  mainClass {
 //        tempAL = extractFuc.extractBlockFromLevelOneBackUp(pureAL, "");//todo
 
         // get class block without media //todo
-        tempAL = extractFuc.extractBlockSimple(tempAL,".header");
+        extractFuc.extractBlockSimple(tempTwoD,".header");
+
+        debugFuc.debugPrintList(extractFuc.extractBlockSimple(tempTwoD,".header"),"2d simple block ",false,"");
 
         debugFuc.debugPrintList(tempAL,"extract block without @media",false);
 

@@ -66,12 +66,12 @@ public class extractFuc {
         System.out.println("end of ConvertLines_To_TwoDiList function");
 
 //        clearNonClassBlock_subClass(myNewArrayList);
-        return myNewArrayList;
+        return listOfLists;
     }
 
 
     //extract block without media block;
-    public static ArrayList<String> extractBlockSimple(List<List<String>> tempLL, String className) {
+    public static List<List<String>> extractBlockSimple(List<List<String>> tempLL, String className) {
 
 
 
@@ -86,17 +86,17 @@ public class extractFuc {
             }
         }
 
-        ArrayList<String> temp = new ArrayList<>();
-        for (int i = 0; i < myArrayL.size(); i++) {
-            if (!myArrayL.get(i).contains("@media") && myArrayL.get(i).contains(className)) {
-                temp.add(myArrayL.get(i));
-                System.out.printf("add: ");
-                System.out.println(myArrayL.get(i));
-            }
-        }
+//        ArrayList<String> temp = new ArrayList<>();
+//        for (int i = 0; i < myArrayL.size(); i++) {
+//            if (!myArrayL.get(i).contains("@media") && myArrayL.get(i).contains(className)) {
+//                temp.add(myArrayL.get(i));
+//                System.out.printf("add: ");
+//                System.out.println(myArrayL.get(i));
+//            }
+//        }
 
 
-        return temp;
+        return newLL;
     }
 
 
