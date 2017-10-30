@@ -1,16 +1,15 @@
-package Function;
+package main.Function;
 
 import java.util.ArrayList;
 
-import static main.mainClass.mainClassTest;
 
 
-public class AssiFunc {
+
+public class assiFunc {
     public static ArrayList<String> clearComment(ArrayList<String> myArrayL) {
         System.out.printf("debugPrintList ");
         System.out.println("length " + myArrayL.size());
-//        System.out.println(Constants.ANSI_RED + "This text is red!" + Constants.ANSI_RESET);
-        mainClassTest();
+//        System.out.println(main.myConstants.ANSI_RED + "This text is red!" + main.myConstants.ANSI_RESET);
 
         boolean commentEnded = false;
         for (int i = 0; i < myArrayL.size(); i++) {
@@ -80,7 +79,7 @@ public class AssiFunc {
             }
         }
 
-        DebugFuc.debugPrintList(myArrayL, "clear up non class block check check----", true);
+        debugFuc.debugPrintList(myArrayL, "clear up non class block check check----", true);
 
         return myArrayL;
     }

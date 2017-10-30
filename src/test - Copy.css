@@ -1,22 +1,21 @@
 
-/*testing*/
-/*@media screen and (max-width: 320px) {*/
-/*#rc-imageselect, .g-recaptcha {*/
-/*transform: scale(0.77);*/
+    /*testing*/
+    /*@media screen and (max-width: 320px) {*/
+    /*#rc-imageselect, .g-recaptcha {*/
+    /*transform: scale(0.77);*/
 
-/*-webkit-transform: scale(0.77);*/
-/*transform-origin: 0 0;*/
-/*-webkit-transform-origin: 0 0;*/
-/*}*/
-/*}*/
-
+    /*-webkit-transform: scale(0.77);*/
+    /*transform-origin: 0 0;*/
+    /*-webkit-transform-origin: 0 0;*/
+    /*}*/
+    /*}*/
 .g-recaptcha {
     transform-origin: left top;
     -webkit-transform-origin: left top;
 }
 
-
-/* Space out content a bit */
+after_g_recaptcha
+    /* Space out content a bit */
 body {
     padding-bottom: 0px;
 }

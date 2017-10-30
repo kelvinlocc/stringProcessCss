@@ -1,10 +1,9 @@
-hello
-<<<start
+
 /*testing*/
 /*@media screen and (max-width: 320px) {*/
 /*#rc-imageselect, .g-recaptcha {*/
 /*transform: scale(0.77);*/
-hi
+
 /*-webkit-transform: scale(0.77);*/
 /*transform-origin: 0 0;*/
 /*-webkit-transform-origin: 0 0;*/
@@ -15,7 +14,7 @@ hi
     transform-origin: left top;
     -webkit-transform-origin: left top;
 }
-after_g_recaptcha
+
 
 /* Space out content a bit */
 body {
@@ -107,4 +106,3 @@ body {
     background-color: #eee;
 }
 
-end>>>

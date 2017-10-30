@@ -2,12 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1fc191d-607a-4236-8d6e-2a338bfc7088" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/StringBuilderDemo.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/stringProcessCss/style.css" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/stringProcessCss/mainClass.class" afterPath="$PROJECT_DIR$/out/production/stringProcessCss/mainClass.class" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/stringProcessCss/StringBuilderDemo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/stringProcessCss/mainClass.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/stringProcessCss/test.txt" afterPath="$PROJECT_DIR$/out/production/stringProcessCss/test.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mainClass.java" afterPath="$PROJECT_DIR$/src/mainClass.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fakeMainClass.java" afterPath="$PROJECT_DIR$/src/fakeMainClass.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Function/assiFunc.java" afterPath="$PROJECT_DIR$/src/main/Function/assiFunc.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Function/debugFuc.java" afterPath="$PROJECT_DIR$/src/main/Function/debugFuc.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Function/extractFuc.java" afterPath="$PROJECT_DIR$/src/main/Function/extractFuc.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/mainClass.java" afterPath="$PROJECT_DIR$/src/main/mainClass.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/myConstants.java" afterPath="$PROJECT_DIR$/src/main/myConstants.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/temp.css" afterPath="$PROJECT_DIR$/src/temp.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/temp/StringBuilderDemo.java" afterPath="$PROJECT_DIR$/src/temp/StringBuilderDemo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test.txt" afterPath="$PROJECT_DIR$/src/test.txt" />
     </list>
     <ignored path="string_process_css.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,50 +31,56 @@
   </component>
   <component name="FavoritesManager">
     <favorites_list name="string_process_css" />
+    <favorites_list name="Unnamed">
+      <favorite_root url="file://$PROJECT_DIR$/src/main/mainClass.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+    </favorites_list>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mainClass.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/mainClass.java">
+      <file leaf-file-name="mainClass.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/mainClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="137" column="43" lean-forward="false" selection-start-line="137" selection-start-column="43" selection-end-line="137" selection-end-column="43" />
+            <state relative-caret-position="556">
+              <caret line="56" column="18" lean-forward="true" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#extractClassFromEveryBlock#0;class#mainClass#0" expanded="false" />
-                <element signature="method#clearComment#0;class#mainClass#0" expanded="false" />
                 <element signature="method#convertStreamToString#0;class#mainClass#0" expanded="false" />
-                <element signature="method#printOriginalFile#0;class#mainClass#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ArrayList.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/ArrayList.java">
+      <file leaf-file-name="extractFuc.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/Function/extractFuc.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="491" column="0" lean-forward="false" selection-start-line="491" selection-start-column="0" selection-end-line="491" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="616">
+              <caret line="95" column="9" lean-forward="true" selection-start-line="95" selection-start-column="9" selection-end-line="95" selection-end-column="9" />
+              <folding>
+                <element signature="e#635#649#0" expanded="true" />
+                <element signature="e#697#705#0" expanded="true" />
+                <element signature="method#extractClassFromEveryBlock#0;class#extractFuc#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StringBuilderDemo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/StringBuilderDemo.java">
+      <file leaf-file-name="debugFuc.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/Function/debugFuc.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="114">
+              <caret line="6" column="34" lean-forward="false" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test.txt">
+      <file leaf-file-name="test - Copy.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test - Copy.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="25" column="7" lean-forward="false" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="7" />
+            <state relative-caret-position="281">
+              <caret line="77" column="10" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -79,6 +92,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -87,9 +101,7 @@
       <find>length</find>
       <find>.jumbotron {</find>
       <find>marketing</find>
-      <find>.marketing</find>
       <find>debugPrintList====================</find>
-      <find>.header</find>
       <find>@media</find>
       <find>extractBlockFromLevelOne</find>
       <find>debugPrintList</find>
@@ -105,6 +117,17 @@
       <find>blockClass</find>
       <find>bracketOpen==0 :</find>
       <find>i--</find>
+      <find>red</find>
+      <find>clearNonClassBlock_subClass</find>
+      <find>after_g_recaptcha</find>
+      <find>add</find>
+      <find>.header</find>
+      <find>myInsideFunction</find>
+      <find>end</find>
+      <find>debugPrintList====================</find>
+      <find>debugFuc</find>
+      <find>.marketing</find>
+      <find>extract block without @media</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -120,8 +143,26 @@
       <list>
         <option value="$PROJECT_DIR$/out/production/stringProcessCss/style.css" />
         <option value="$PROJECT_DIR$/out/production/stringProcessCss/test.txt" />
+        <option value="$PROJECT_DIR$/src/test - Copy.css" />
         <option value="$PROJECT_DIR$/src/StringBuilderDemo.java" />
+        <option value="$PROJECT_DIR$/src/ExtractClassBlockLOne.java" />
+        <option value="$PROJECT_DIR$/src/ExtractFuc.java" />
+        <option value="$PROJECT_DIR$/src/DebugFuc.java" />
+        <option value="$PROJECT_DIR$/src/Constants.java" />
+        <option value="$PROJECT_DIR$/src/AssiFunc.java" />
+        <option value="$PROJECT_DIR$/src/Function/AssiFunc.java" />
+        <option value="$PROJECT_DIR$/src/Function/ExtractFuc.java" />
+        <option value="$PROJECT_DIR$/src/temp/StringBuilderDemo.java" />
+        <option value="$PROJECT_DIR$/src/fakeMainClass.java" />
         <option value="$PROJECT_DIR$/src/mainClass.java" />
+        <option value="$PROJECT_DIR$/src/test.txt" />
+        <option value="$PROJECT_DIR$/src/temp.css" />
+        <option value="$PROJECT_DIR$/src/main/Constants.java" />
+        <option value="$PROJECT_DIR$/src/main/Function/AssiFunc.java" />
+        <option value="$PROJECT_DIR$/src/main/Function/ExtractFuc.java" />
+        <option value="$PROJECT_DIR$/src/main/Function/debugFuc.java" />
+        <option value="$PROJECT_DIR$/src/main/mainClass.java" />
+        <option value="$PROJECT_DIR$/src/main/Function/extractFuc.java" />
       </list>
     </option>
   </component>
@@ -131,7 +172,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="54" />
     <option name="width" value="1690" />
     <option name="height" value="1080" />
@@ -151,6 +192,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -181,14 +223,32 @@
               <item name="stringProcessCs" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="string_process_css" type="b2602c69:ProjectViewProjectNode" />
+              <item name="stringProcessCs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="string_process_css" type="b2602c69:ProjectViewProjectNode" />
+              <item name="stringProcessCs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="Function" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="string_process_css" type="b2602c69:ProjectViewProjectNode" />
+              <item name="stringProcessCs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="temp" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -197,6 +257,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -218,7 +279,7 @@
   <component name="RunManager" selected="Application.mainClass">
     <configuration name="StringBuilderDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="StringBuilderDemo" />
+      <option name="MAIN_CLASS_NAME" value="temp.StringBuilderDemo" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -471,7 +532,7 @@
     </configuration>
     <configuration name="mainClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="mainClass" />
+      <option name="MAIN_CLASS_NAME" value="main.mainClass" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -509,12 +570,13 @@
       <workItem from="1509094227060" duration="5485000" />
       <workItem from="1509326273165" duration="2160000" />
       <workItem from="1509328459224" duration="1835000" />
-      <workItem from="1509330338987" duration="7386000" />
+      <workItem from="1509330338987" duration="13350000" />
+      <workItem from="1509349141408" duration="7021000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32313000" />
+    <option name="totallyTimeSpent" value="45298000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -526,7 +588,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1874" height="1096" extended-state="6" />
+    <frame x="-8" y="-8" width="1874" height="1096" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -538,12 +600,13 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5161464" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="228" y="67" width="971" height="633" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3810549" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="228" y="67" width="971" height="633" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928064" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12970936" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.164155" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928064" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -555,7 +618,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928064" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -583,16 +645,83 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/mainClass.java">
+    <entry file="file://$PROJECT_DIR$/src/main/mainClass.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#extractClassFromEveryBlock#0;class#mainClass#0" expanded="false" />
-            <element signature="method#clearComment#0;class#mainClass#0" expanded="false" />
             <element signature="method#convertStreamToString#0;class#mainClass#0" expanded="false" />
-            <element signature="method#printOriginalFile#0;class#mainClass#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fakeMainClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="21" column="43" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#extractClassFromEveryBlock#0;class#fakeMainClass#0" expanded="false" />
+            <element signature="method#convertStreamToString#0;class#fakeMainClass#0" expanded="false" />
+            <element signature="method#printOriginalFile#0;class#fakeMainClass#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/temp/StringBuilderDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="25" lean-forward="false" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Function/extractFuc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding>
+            <element signature="e#635#649#0" expanded="true" />
+            <element signature="e#697#705#0" expanded="true" />
+            <element signature="method#extractClassFromEveryBlock#0;class#extractFuc#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Function/debugFuc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Function/assiFunc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="12" column="10" lean-forward="true" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/myConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/mainClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#convertStreamToString#0;class#mainClass#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -601,28 +730,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
           <caret line="25" column="7" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/out/production/stringProcessCss/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46911">
-          <caret line="2469" column="14" lean-forward="false" selection-start-line="2469" selection-start-column="14" selection-end-line="2469" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mainClass.java">
+    <entry file="file://$PROJECT_DIR$/out/production/stringProcessCss/style.css" />
+    <entry file="file://$PROJECT_DIR$/src/main/mainClass.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#extractClassFromEveryBlock#0;class#mainClass#0" expanded="false" />
-            <element signature="method#clearComment#0;class#mainClass#0" expanded="false" />
             <element signature="method#convertStreamToString#0;class#mainClass#0" expanded="false" />
-            <element signature="method#printOriginalFile#0;class#mainClass#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -631,28 +749,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
           <caret line="25" column="7" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/out/production/stringProcessCss/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46911">
-          <caret line="2469" column="14" lean-forward="false" selection-start-line="2469" selection-start-column="14" selection-end-line="2469" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mainClass.java">
+    <entry file="file://$PROJECT_DIR$/out/production/stringProcessCss/style.css" />
+    <entry file="file://$PROJECT_DIR$/src/main/mainClass.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#extractClassFromEveryBlock#0;class#mainClass#0" expanded="false" />
-            <element signature="method#clearComment#0;class#mainClass#0" expanded="false" />
             <element signature="method#convertStreamToString#0;class#mainClass#0" expanded="false" />
-            <element signature="method#printOriginalFile#0;class#mainClass#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -661,28 +768,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
           <caret line="25" column="7" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/out/production/stringProcessCss/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46911">
-          <caret line="2469" column="14" lean-forward="true" selection-start-line="2469" selection-start-column="14" selection-end-line="2469" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mainClass.java">
+    <entry file="file://$PROJECT_DIR$/out/production/stringProcessCss/style.css" />
+    <entry file="file://$PROJECT_DIR$/src/main/mainClass.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#extractClassFromEveryBlock#0;class#mainClass#0" expanded="false" />
-            <element signature="method#clearComment#0;class#mainClass#0" expanded="false" />
             <element signature="method#convertStreamToString#0;class#mainClass#0" expanded="false" />
-            <element signature="method#printOriginalFile#0;class#mainClass#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -691,28 +787,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1121">
           <caret line="59" column="6" lean-forward="true" selection-start-line="59" selection-start-column="6" selection-end-line="59" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/out/production/stringProcessCss/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1026">
-          <caret line="54" column="18" lean-forward="true" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mainClass.java">
+    <entry file="file://$PROJECT_DIR$/out/production/stringProcessCss/style.css" />
+    <entry file="file://$PROJECT_DIR$/src/main/mainClass.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#extractClassFromEveryBlock#0;class#mainClass#0" expanded="false" />
-            <element signature="method#clearComment#0;class#mainClass#0" expanded="false" />
             <element signature="method#convertStreamToString#0;class#mainClass#0" expanded="false" />
-            <element signature="method#printOriginalFile#0;class#mainClass#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -721,28 +806,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1938">
           <caret line="102" column="1" lean-forward="true" selection-start-line="102" selection-start-column="1" selection-end-line="102" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/out/production/stringProcessCss/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mainClass.java">
+    <entry file="file://$PROJECT_DIR$/out/production/stringProcessCss/style.css" />
+    <entry file="file://$PROJECT_DIR$/src/main/mainClass.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#extractClassFromEveryBlock#0;class#mainClass#0" expanded="false" />
-            <element signature="method#clearComment#0;class#mainClass#0" expanded="false" />
             <element signature="method#convertStreamToString#0;class#mainClass#0" expanded="false" />
-            <element signature="method#printOriginalFile#0;class#mainClass#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -751,26 +825,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
           <caret line="25" column="7" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/out/production/stringProcessCss/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46911">
-          <caret line="2469" column="14" lean-forward="false" selection-start-line="2469" selection-start-column="14" selection-end-line="2469" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/production/stringProcessCss/mainClass.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/stringProcessCss/style.css" />
+    <entry file="file://$PROJECT_DIR$/out/production/stringProcessCss/mainClass.class" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/ArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
@@ -779,32 +838,96 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/StringBuilderDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="25" column="7" lean-forward="false" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="7" />
+        <state relative-caret-position="304">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mainClass.java">
+    <entry file="file://$PROJECT_DIR$/src/temp/StringBuilderDemo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="137" column="43" lean-forward="false" selection-start-line="137" selection-start-column="43" selection-end-line="137" selection-end-column="43" />
+        <state relative-caret-position="171">
+          <caret line="9" column="25" lean-forward="false" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fakeMainClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="20" column="54" lean-forward="true" selection-start-line="20" selection-start-column="54" selection-end-line="20" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#extractClassFromEveryBlock#0;class#mainClass#0" expanded="false" />
-            <element signature="method#clearComment#0;class#mainClass#0" expanded="false" />
+            <element signature="method#extractClassFromEveryBlock#0;class#fakeMainClass#0" expanded="false" />
+            <element signature="method#convertStreamToString#0;class#fakeMainClass#0" expanded="false" />
+            <element signature="method#printOriginalFile#0;class#fakeMainClass#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/temp.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="55" column="19" lean-forward="true" selection-start-line="55" selection-start-column="19" selection-end-line="55" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/myConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="31" lean-forward="false" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Function/debugFuc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="34" lean-forward="false" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Function/assiFunc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="717">
+          <caret line="81" column="17" lean-forward="false" selection-start-line="81" selection-start-column="17" selection-end-line="81" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test - Copy.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="77" column="10" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/mainClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="556">
+          <caret line="56" column="18" lean-forward="true" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#convertStreamToString#0;class#mainClass#0" expanded="false" />
-            <element signature="method#printOriginalFile#0;class#mainClass#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Function/extractFuc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="95" column="9" lean-forward="true" selection-start-line="95" selection-start-column="9" selection-end-line="95" selection-end-column="9" />
+          <folding>
+            <element signature="e#635#649#0" expanded="true" />
+            <element signature="e#697#705#0" expanded="true" />
+            <element signature="method#extractClassFromEveryBlock#0;class#extractFuc#0" expanded="false" />
           </folding>
         </state>
       </provider>

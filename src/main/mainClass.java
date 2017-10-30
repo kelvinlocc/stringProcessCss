@@ -1,15 +1,16 @@
+package main;
 
-
-import Function.AssiFunc;
-import Function.DebugFuc;
-import Function.ExtractFuc;
+import main.Function.assiFunc;
+import main.Function.debugFuc;
+import main.Function.extractFuc;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 
-public class mainClass {
+public class  mainClass {
     private static InputStream myInputStream = null;
     static String absoluteFilePath = "C://Users/chichiu/Desktop/test.txt"; // absolute path
     //    static String relativeFilePath = "./file/test.txt"; // relative path // not working
@@ -18,21 +19,14 @@ public class mainClass {
     private static String cssClassToFind = "";
     private static ArrayList<String> tempAL = new ArrayList<>();
 
-    public void main(String[] args) throws Exception {
-        System.out.println("mainClass ");
-
+    public static void main(String[] args) throws Exception {
+        System.out.println("mainClass running");
         System.out.println(System.getProperty("user.dir"));
+        myInputStream = main.mainClass.class.getResourceAsStream("/test.txt");
 
-//        myInputStream = this.getClass().getResource("/textfiles/test.txt");
-
-//        myInputStream = mainClass.class.getResourceAsStream("/test.txt");
-
-//        myInputStream = new FileInputStream(relativeFilePath);
-//        printOriginalFile(); // print whole original file text
 
 
         String myString = convertStreamToString(myInputStream);
-//        System.out.print(myString);
         String[] myLinesArray = myString.split("\\n");
 
 
@@ -58,90 +52,28 @@ public class mainClass {
         cssClassToFind = userInput;
         ArrayList<String> pureAL = new ArrayList<>();
 
-        pureAL = AssiFunc.clearEmptyLine( AssiFunc.clearComment(myLineArrayList));
+        //pure array list:
+        pureAL = assiFunc.clearEmptyLine( assiFunc.clearComment(myLineArrayList));
+        List<List<String>> tempTwoD = new ArrayList<>();
+        tempTwoD = extractFuc.ConvertLines_To_TwoDiList(pureAL, "");
 
-        tempAL = ExtractFuc.extractBlockFromLevelOne(pureAL, "");//todo
+//        tempAL = extractFuc.extractBlockFromLevelOneBackUp(pureAL, "");//todo
 
+        // get class block without media //todo
+        tempAL = extractFuc.extractBlockSimple(tempAL,".header");
+
+        debugFuc.debugPrintList(tempAL,"extract block without @media",false);
+
+        //get class block with media
+
+//        debugFuc.debugPrintList(extractFuc.extractClassFromEveryBlock(pureAL,".marketing")," my test ",false);
+
+//        tempAL = extractFuc.ConvertLines_To_TwoDiList(pureAL, "");//todo
 
     }
 
 
-    static ArrayList<String> extractClassFromEveryBlock(ArrayList<String> myArrayL, String className) {
-        System.out.printf("extractClassFromEveryBlock ");
-        System.out.println("length " + myArrayL.size());
-        ArrayList<String> myNewArrayList = new ArrayList<>();
 
-        int bracketOpen = 0;
-        boolean findFirstBracket = false;
-        for (int i = 0; i < myArrayL.size(); i++) {
-
-            System.out.printf("line " + i + " :");
-            String string = myArrayL.get(i);
-
-//            System.out.print(myArrayL.get(i) + "\r\n");
-
-
-            if (myArrayL.get(i).contains(className)) {
-                //String string = myArrayL.get(i) + Integer.toString(bracketOpen);
-                myNewArrayList.add(myArrayL.get(i));
-
-
-                if (myArrayL.get(i).contains("{")) {
-                    bracketOpen++;
-                } else {
-                    findFirstBracket = true;
-                }
-                if (myArrayL.get(i).contains("}")) {
-                    bracketOpen--;
-                }
-
-            } else if (bracketOpen > 0) {
-                myNewArrayList.add(myArrayL.get(i));
-                if (myArrayL.get(i).contains("{")) {
-                    bracketOpen++;
-                }
-
-                if (myArrayL.get(i).contains("}")) {
-                    bracketOpen--;
-
-                }
-
-            } else if (findFirstBracket) {
-                myNewArrayList.add(myArrayL.get(i));
-
-                if (myArrayL.get(i).contains("{")) {
-
-                    bracketOpen++;
-                    findFirstBracket = false;
-
-                } else {
-                    findFirstBracket = true;
-                }
-            }
-
-
-        }
-
-//        debugPrintList(myNewArrayList);
-
-        return myNewArrayList;
-    }
-
-
-
-
-
-
-
-
-    // print array list
-
-
-
-
-public static void  mainClassTest(){
-        System.out.println("123");
-}
 
 
     static String convertStreamToString(java.io.InputStream is) {
@@ -149,38 +81,4 @@ public static void  mainClassTest(){
         return s.hasNext() ? s.next() : "";
     }
 
-    public static void printOriginalFile() throws IOException {
-
-        int i;
-        char c;
-        try {
-
-            // new input stream created //C:\Users\chichiu\Desktop\
-
-
-            // reads till the end of the stream
-            while ((i = myInputStream.read()) != -1) {
-
-                // converts integer to character
-                c = (char) i;
-
-
-                // prints character
-
-                System.out.print(c);
-
-            }
-
-
-        } catch (Exception e) {
-
-            // if any I/O error occurs
-            e.printStackTrace();
-        } finally {
-
-            // releases system resources associated with this stream
-            if (myInputStream != null)
-                myInputStream.close();
-        }
-    }
 }
